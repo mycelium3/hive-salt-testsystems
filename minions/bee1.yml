@@ -1,0 +1,15 @@
+minion_id: bee1
+bareos_local:
+   fd_name: {{ minion_id }}_fd
+   password: "$apr1$9XRsrEGn$nOM9s2uedP4T1N89xqALY1"
+{% if not salt['file.directory_exists']('/srv/local/bareos-fd.pem') %}
+   keypair: "/srv/local/bareos-fd.pem"
+   cipher : "aes128"
+   master-key: "/srv/salt/bareos-master-pub.key"
+   encryption: yes
+   signatures: yes
+{% endif %}   
+
+cloudflour_ddns_local:
+   token: bEh7sJV/OM4GE
+   domain: {{ grains['host'] }}.{{ grains['domain'] }}
