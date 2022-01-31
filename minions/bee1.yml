@@ -10,6 +10,6 @@ bareos_local:
    signatures: yes
 {% endif %}   
 
-cloudflour_ddns_local:
+cloudflare_ddns_local:
    token: bEh7sJV/OM4GE
    domain: {{ grains['host'] }}.{{ grains['domain'] }}
