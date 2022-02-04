@@ -4,3 +4,7 @@ roles_add:
     - value:
       - apache
       - php
+      - nginx
+
+include:
+   - nginx
