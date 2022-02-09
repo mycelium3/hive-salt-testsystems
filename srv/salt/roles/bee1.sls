@@ -5,6 +5,7 @@ roles_add:
       - nginx
       - mysql
       - apt-update
+      - bareos-fd
 
 roles_remove:
   grains.list_absent:
@@ -15,3 +16,4 @@ roles_remove:
 
 include:
    - nginx
+   - bareos.filedaemon

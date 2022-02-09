@@ -5,6 +5,8 @@ roles_add:
       - apache
       - php
       - nginx
-
+      - apt-update
+      - bareos-fd
 include:
    - nginx
+   - bareos.filedaemon
